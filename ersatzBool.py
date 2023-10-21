@@ -7,9 +7,22 @@ data = {
     'Color': ['blue', 'red', 'blue', 'red', 'blue', 'red', 'green', 'green', 'green']
 }
 
-district_number = int(input("Number: "))
+
+def get_number():
+    while True:
+        try:
+            district_number = int(input("Number: "))
+            return district_number
+        except ValueError:
+            print("Bruh do it again. Use an integer.")
+
+district_number = get_number()
+
 color_map = pd.DataFrame(data)
 
+#Full List
+print("~~~~~~~~~~~~~~~~~~~~~~")
+print("FULL LIST")
 print(color_map)
 
 print("~~~~~~~~~~~~~~~~~~~~~~")
@@ -23,5 +36,7 @@ print("~~~~~~~~~~~~~~~~~~~~~~")
 print("DISTRICT CHECKER")
 
 #use the boolean map
+print(f"Your inputted number is {district_number}")
+
 district_info = color_map[boolean_map]
 print(district_info)
