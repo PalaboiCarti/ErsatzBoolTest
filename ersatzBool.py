@@ -11,12 +11,12 @@ data = {
 def get_number():
     while True:
         try:
-            district_number = int(input("Number: "))
-            return district_number
+            user_number = int(input("Input district number: "))
+            return user_number
         except ValueError:
             print("Bruh do it again. Use an integer.")
 
-district_number = get_number()
+user_number = get_number()
 
 color_map = pd.DataFrame(data)
 
@@ -29,17 +29,22 @@ print("~~~~~~~~~~~~~~~~~~~~~~")
 print("BOOLEAN SERIES")
 
 #Checks if number is equal to any item in the list through a boolean
-boolean_map = color_map['District'] == district_number
+boolean_map = color_map['District'] == user_number
 print(boolean_map)
 
 print("~~~~~~~~~~~~~~~~~~~~~~")
 print("DISTRICT CHECKER")
 
 #use the boolean map
-print(f"Your inputted number is : {district_number}")
-
 district_info = color_map[boolean_map]
 district_color = district_info['Color'].values[0]
-print(f"Your District color is : {district_color}")
+district_number = district_info['District'].values[0]
 
+def display_info():
+    print(f"Your inputted number is : {user_number}")
+    print(f"Your District color is : {district_color}")
+
+display_info()
+print("~~~~~~~~~~~~~~~~~~~~~~")
+print(f"Your inputted number {user_number} corresponds to District Number {district_number}")
 print(district_info)
