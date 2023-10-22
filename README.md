@@ -1,4 +1,5 @@
-#Okay it works
+#Palaboi - Satz v3.0 is fully operational
+
 I have a local repo with a venv in it with all the dependencies I need for this to work.
 
 Man if u want just make ur own venv and install pandas in there. With that it should work. I made this frustrated asl hence the "gfys" repo name.
