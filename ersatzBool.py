@@ -12,9 +12,12 @@ def get_number():
     while True:
         try:
             user_number = int(input("Input district number: "))
-            return user_number
+            if 1 <= user_number <= 9:
+                return user_number
+            else:
+                print("Select an integer between 1-9 bruh.")
         except ValueError:
-            print("Bruh do it again. Use an integer.")
+            print("Use an integer, dumbass.")
 
 user_number = get_number()
 
