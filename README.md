@@ -7,6 +7,7 @@ Heres how
 ```python 
 pip install virtualenv
 ```
+Change your directory into your local repo and type this into your terminal
 ```python 
 virtualenv venv
 ```
