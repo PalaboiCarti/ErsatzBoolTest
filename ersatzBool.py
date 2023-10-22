@@ -36,7 +36,10 @@ print("~~~~~~~~~~~~~~~~~~~~~~")
 print("DISTRICT CHECKER")
 
 #use the boolean map
-print(f"Your inputted number is {district_number}")
+print(f"Your inputted number is : {district_number}")
 
 district_info = color_map[boolean_map]
+district_color = district_info['Color'].values[0]
+print(f"Your District color is : {district_color}")
+
 print(district_info)
