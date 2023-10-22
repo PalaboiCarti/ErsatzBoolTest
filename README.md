@@ -12,6 +12,11 @@ Change your directory into your local repo and type this into your terminal
 virtualenv venv
 ```
 
+in your virtual environment, install pandas
+```python
+pip install pandas
+```
+
 Also, if you're using venv, DO NOT use git with the (venv) terminal. Always use gitbash for git. Use venv for running scripts or installing packages only.
 
 If you make updates on readme or whatever its best u do it here. Man, fetching main and shit like that then merging origin an branch? who gives a fuck about that? i dont. so yeah.
