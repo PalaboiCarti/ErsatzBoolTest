@@ -1,5 +1,6 @@
 #palaboiSatz v3.0 lol
 #oct/22/2023 20:04
+# Fully operational. Will add comments soon hindi ngayon kasi tinatamad pa ko, kaya mo na yan.
 import pandas as pd 
 
 # Data set.
