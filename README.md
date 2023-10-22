@@ -4,8 +4,12 @@ I have a local repo with a venv in it with all the dependencies I need for this 
 Man if u want just make ur own venv and install pandas in there. With that it should work. I made this frustrated asl hence the "gfys" repo name.
 
 Heres how
-```py pip install virtualenv```
-```py virtualenv venv```
+```python 
+pip install virtualenv
+```
+```python 
+virtualenv venv
+```
 
 Also, if you're using venv, DO NOT use git with the (venv) terminal. Always use gitbash for git. Use venv for running scripts or installing packages only.
 
