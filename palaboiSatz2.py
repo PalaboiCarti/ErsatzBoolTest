@@ -1,6 +1,6 @@
 # palaboiSatz v2.0
-# oct/22/2023 10:34
-# Initial commit 
+# oct/22/2023 14:52
+# Fully operational
 import pandas as pd 
 
 # Data set.
@@ -64,9 +64,9 @@ def display_info():
     
     def get_curfew_schedule(age, district_color):
         if not district_info.empty:
-            day = ""
-            curfew_start = ""
-            curfew_end = ""
+            day = None
+            curfew_start = None
+            curfew_end = None
             if age > 60 or age < 18:
                 if district_color == 'blue':
                     day = "Mon/Thu/Fri"
