@@ -46,5 +46,5 @@ def display_info():
 
 display_info()
 print("~~~~~~~~~~~~~~~~~~~~~~")
-print(f"Your inputted number {user_number} corresponds to District Number {district_number}")
+print(f"Your inputted number \"{user_number}\" corresponds to District Number {district_number}")
 print(district_info)
