@@ -1,20 +1,18 @@
 # palaboiSatz v2.0
-# oct/22/2023 14:52
-# Fully operational
+# oct/22/2023 13:01
+# Fully operational, added comments for your dumb ahh
 import pandas as pd 
 
-# Data set.
+# Data set
 data = {
     'District': [1, 2, 3, 4, 5, 6, 7, 8, 9],
     'Color': ['blue', 'red', 'blue', 'red', 'blue', 'red', 'green', 'green', 'green']
 }
-
-# Initialize user_number
+# Base variables
 user_number = None
-
 color_map = pd.DataFrame(data)
 
-# Put your functions here.
+# Luh calm functions
 def get_name():
     while True:
         name = input("⌨ Name: ")
@@ -45,28 +43,30 @@ def get_number():
         except ValueError:
             print("Use an integer, dumbass.")
       
-
 # Display that shit
 def display_info():
     print("》》》》》》》》》》》》 PLEASE ENTER YOUR USER INFORMATION BELOW 《《《《《《《《《《《《")
-
     name = get_name()
     age = get_age()
-    
-    # Call get_number to set the user_number
+    # Call this to change the global var user_number
     get_number()
-    
+
     # Check if user_number is in the data
     boolean_map = color_map['District'] == user_number
+
+    # Variable translations n shit
     district_info = color_map[boolean_map]
     district_number = district_info['District'].values[0]
     district_color = district_info['Color'].values[0]
     
     def get_curfew_schedule(age, district_color):
         if not district_info.empty:
+            # Luh calm variables
             day = None
             curfew_start = None
             curfew_end = None
+
+            # Luh calm ifelse
             if age > 60 or age < 18:
                 if district_color == 'blue':
                     day = "Mon/Thu/Fri"
@@ -83,11 +83,16 @@ def display_info():
                 elif district_color == 'green':
                     day = "Tue/Sat"
                 curfew_start, curfew_end = "6AM", "9PM" 
+
+            # Luh calm return values from Luh calm ifelse
             return day, f"{curfew_start}-{curfew_end}"
         else:
             print("No information found for District number:", user_number)
+    
+    # Set values returned from get_curfew_schedule
+    day, curfew_schedule = get_curfew_schedule(age, district_color) 
 
-    day, curfew_schedule = get_curfew_schedule(age, district_color)    
+    # Display the outpput
     print("》》》》》》》》》》》》》》》》 HERE IS YOUR CURFEW SCHEDULE 《《《《《《《《《《《《《《《《")
     print("")
     print(f"☞ Name: {name}")
@@ -97,5 +102,5 @@ def display_info():
     print("")
     print("》》》》》》》》》》》》》》》》》》》 PLEASE STAY SAFE! 《《《《《《《《《《《《《《《《《《《《")
 
-# Main function
+# Display that ho
 display_info()
