@@ -1,5 +1,5 @@
 #Boolean system thing. Im experimenting with it
-#oct/20/2023 17:57
+#oct/22/2023 08:19
 import pandas as pd 
 
 data = {
